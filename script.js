@@ -1,27 +1,42 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Get the button and result container
-  const button = document.getElementById("generateBtn");
-  const result = document.getElementById("result");
+  const toInput = document.getElementById("toName");
+  const fromInput = document.getElementById("fromName");
+  const generateBtn = document.getElementById("generateBtn");
 
-  button.addEventListener("click", () => {
-    // Get input values and trim whitespace
-    const to = document.getElementById("toName").value.trim();
-    const from = document.getElementById("fromName").value.trim();
+  // Envelope and card elements
+  const envelopeTop = document.querySelector(".envelope-top");
+  const envelopeSeal = document.querySelector(".envelope-seal");
+  const valentineText = document.getElementById("valentine-text");
+  const valentineMsg = document.getElementById("valentine-msg");
+  const loveProgress = document.querySelector(".love-progress");
 
-    // Make sure both inputs are filled
+  generateBtn.addEventListener("click", () => {
+    const to = toInput.value.trim();
+    const from = fromInput.value.trim();
+
     if (!to || !from) {
       alert("Please fill in both names ❤️");
       return;
     }
 
-    // Build link pointing to valentine.html
-    const baseURL = window.location.origin + '/valentine.html';
-    const link = `${baseURL}?to=${encodeURIComponent(to)}&from=${encodeURIComponent(from)}`;
+    // Set greeting text
+    valentineText.textContent = `Will u be my Valentine, ${to}?`;
+    valentineMsg.textContent = `A little gift from ${from} ❤️`;
 
-    // Display the link for copying / clicking
-    result.innerHTML = `
-      <p>Your personalised Valentine link:</p>
-      <a href="${link}" target="_blank">${link}</a>
-    `;
+    // Reset envelope animation
+    envelopeTop.style.transform = "rotateX(0deg)";
+    loveProgress.style.width = "0%";
+
+    // Show the envelope (if hidden)
+    envelopeTop.parentElement.style.display = "block";
+
+    // Add click listener to seal to open envelope
+    envelopeSeal.onclick = () => {
+      envelopeTop.style.transform = "rotateX(-180deg)";
+      // Animate love bar
+      setTimeout(() => {
+        loveProgress.style.width = "90%"; // glowing love level
+      }, 400);
+    };
   });
 });
