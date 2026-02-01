@@ -1,0 +1,256 @@
+/* ===================== GLOBAL + BACKGROUND ===================== */
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  background: linear-gradient(120deg, #f6b7c1, #b11226);
+  overflow-x: hidden;
+}
+
+.slide {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 10px;
+}
+
+.hidden-slide {
+  display: none;
+}
+
+/* ===================== SLIDE 1 — GREETING ===================== */
+
+.big-heart {
+  width: 150px;
+  animation: pulse 2s infinite;
+}
+
+.emoji {
+  font-size: 3rem;
+  margin-top: 12px;
+}
+
+/* Floating decorations */
+.heart.top-left,
+.heart2.top-left2,
+.lipstick.top-right {
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: drop-shadow(0 3px 6px rgba(0,0,0,0.15));
+}
+
+.heart.top-left {
+  top: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  background-image: url('assets/icons/heart1.png');
+  animation: float 3s ease-in-out infinite;
+}
+
+.heart2.top-left2 {
+  top: 70px;
+  left: 40px;
+  width: 50px;
+  height: 50px;
+  background-image: url('assets/icons/heart2.png');
+  animation: float 3s ease-in-out infinite;
+}
+
+.lipstick.top-right {
+  top: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-image: url('assets/icons/lipstick.png');
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Valentine heading */
+#valentine-text {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3.2rem;
+  color: #fff;
+  margin-top: 18px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.25);
+  animation: fadeInDown 1s ease-out both;
+}
+
+.emoji {
+  font-size: 3.5rem;
+  margin-top: 10px;
+  color: #fff;
+  animation: fadeInUp 1.2s ease-out both;
+}
+
+@keyframes fadeInDown { from {opacity:0; transform:translateY(-20px);} to{opacity:1;transform:translateY(0);} }
+@keyframes fadeInUp { from {opacity:0; transform:translateY(20px);} to{opacity:1;transform:translateY(0);} }
+
+/* ===================== SLIDE 2 — YOU + ME ===================== */
+
+.image-frame {
+  border: 8px solid #fff;
+  border-radius: 24px;
+  padding: 6px;
+  margin-bottom: 20px;
+}
+
+.couple-photo {
+  width: 280px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.love-list-box {
+  background: rgba(255,255,255,0.9);
+  padding: 20px;
+  border-radius: 20px;
+  width: 260px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  margin-bottom: 20px;
+}
+
+.love-list-box .love-list {
+  text-align: left;
+  padding-left: 18px;
+  font-size: 1.15rem;
+}
+
+/* ===================== SLIDE 3 — LOVE LETTER ===================== */
+
+.love-letter-container {
+  background: rgba(255,255,255,0.95);
+  border-radius: 20px;
+  width: 85%;
+  max-width: 450px;
+  padding: 28px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  font-size: 1.25rem;
+  color: #2a2a2a;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.half-heart.next-button3 {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background-image: url('assets/icons/half-heart.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: float 3s ease-in-out infinite;
+  cursor: pointer;
+}
+
+/* ===================== SLIDE 4 — FLOWERS ===================== */
+
+.flower-frame { margin-top: 15px; }
+.flower-img { width: 180px; animation: bloom 1.8s ease-in-out; margin-bottom: 15px; }
+
+.message-float {
+  background: rgba(255,255,255,0.9);
+  border-radius: 16px;
+  padding: 10px;
+  font-size: 1.15rem;
+  color: #2a2a2a;
+  margin: 10px auto;
+  opacity: 0;
+  animation: slideIn 1.2s ease-out forwards;
+}
+
+.left-msg{animation-delay:0.6s;} .right-msg{animation-delay:0.8s;} .left-msg2{animation-delay:1s;}
+
+.paper-plane {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: -70px;
+  background-image: url('assets/icons/paper-plane.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: flyPlane 4s ease-in-out infinite;
+}
+
+.close-eyes {
+  position: absolute;
+  bottom: 30px;
+  padding: 14px 28px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 24px;
+  background: #fff;
+  color: #b11226;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* ===================== SLIDE 5 — GIFTS ===================== */
+
+.gifts-container {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  margin-bottom: 18px;
+}
+
+.gift {
+  width: 90px;
+  height: 90px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  animation: float 3s ease-in-out infinite;
+}
+
+#gift1 { background-image: url('assets/icons/gift-1.png'); }
+#gift2 { background-image: url('assets/icons/gift-2.png'); }
+#gift3 { background-image: url('assets/icons/gift-3.png'); }
+
+.gift-text {
+  font-size: 1.25rem;
+  color: #fff;
+  margin-top: 10px;
+}
+
+/* ===================== FINAL QR SLIDES ===================== */
+
+.final-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.7rem;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.final-text {
+  font-size: 1.25rem;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+.qr-img {
+  width: 230px;
+  height: 230px;
+  padding: 12px;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+  cursor: pointer;
+}
+
+/* ===================== ANIMATIONS ===================== */
+
+@keyframes float {0%{transform:translateY(0);}50%{transform:translateY(-8px);}100%{transform:translateY(0);}}
+@keyframes pulse {0%,100%{transform:scale(1);}50%{transform:scale(1.1);}}
+@keyframes slideIn {from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+@keyframes bloom {from{opacity:0;transform:scale(0.8);}to{opacity:1;transform:scale(1);}}
+@keyframes flyPlane {0%{transform:translate(-40px,90vh) rotate(0deg);}35%{transform:translate(30vw,60vh) rotate(10deg);}70%{transform:translate(70vw,30vh) rotate(-10deg);}100%{transform:translate(-40px,-20vh) rotate(0deg);}}
+@keyframes fadeInDown {from{opacity:0;transform:translateY(-20px);}to{opacity:1;transform:translateY(0);}}
+@keyframes fadeInUp {from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}

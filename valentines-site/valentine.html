@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Valentine 💞</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="valentine-body">
+
+  <!-- Slide 1 -->
+  <div id="slide1" class="slide">
+    <div class="slide-content">
+      <h1 id="valentine-text">Happy Valentine’s Day 💖</h1>
+      <img src="assets/icons/big-heart.png" class="big-heart" alt="Heart">
+      <p class="emoji">🥺❤️</p>
+    </div>
+
+    <div class="heart top-left"></div>
+    <div class="heart2 top-left2"></div>
+    <div class="lipstick top-right"></div>
+  </div>
+
+  <!-- Slide 2 -->
+  <div id="slide2" class="slide hidden-slide">
+    <div class="slide-content">
+      <h2 class="slide2-title">You + Me Forever</h2>
+      <div class="image-frame">
+        <img src="assets/images/couple.png" class="couple-photo" alt="Couple">
+      </div>
+      <div class="love-list-box">
+        <p class="love-head">Love…</p>
+        <ol class="love-list">
+          <li>Your eyes</li>
+          <li>Your smile</li>
+        </ol>
+      </div>
+    </div>
+    <div class="envelope next-button" id="toSlide3"></div>
+  </div>
+
+  <!-- Slide 3 -->
+  <div id="slide3" class="slide hidden-slide">
+    <div class="slide-content">
+      <h2 class="slide3-title">Heart 2 Heart</h2>
+      <div class="love-letter-container">
+        <p class="letter-text">
+          Dear My Love,<br><br>
+          From the moment I saw you, my heart whispered “home.” Your laugh, your smile,
+          your presence feels like peace and sunshine at once. You make every moment
+          unforgettable and my life brighter just by being in it.<br><br>
+          With all my love,<br>
+          Always & Forever.
+        </p>
+      </div>
+    </div>
+    <div class="half-heart next-button3" id="toSlide4"></div>
+  </div>
+
+  <!-- Slide 4 -->
+  <div id="slide4" class="slide hidden-slide">
+    <div class="slide-content">
+      <h2 class="slide4-title">Flowers for You 🌸</h2>
+      <div class="flower-frame">
+        <img src="assets/icons/flower.png" class="flower-img" alt="Flower">
+      </div>
+      <div class="message-float left-msg">You will forever be my option.</div>
+      <div class="message-float right-msg">Your smile brings out my sunniest days.</div>
+      <div class="message-float left-msg2">My heart belongs to you.</div>
+    </div>
+    <div class="paper-plane"></div>
+    <button class="close-eyes" id="toSlide5">Close your eyes</button>
+  </div>
+
+  <!-- Slide 5 -->
+  <div id="slide5" class="slide hidden-slide">
+    <div class="slide-content">
+      <h2 class="slide5-title">Surprise 🎁</h2>
+      <div class="gifts-container">
+        <div class="gift" id="gift1"></div>
+        <div class="gift" id="gift2"></div>
+        <div class="gift" id="gift3"></div>
+      </div>
+      <p class="gift-text">Click a gift to see your surprise ❤️</p>
+    </div>
+  </div>
+
+  <!-- Slide 6a - Song -->
+  <div id="slide6a" class="slide hidden-slide">
+    <div class="slide-content">
+      <h2 class="final-title">Our Wedding Song 🎶</h2>
+      <p class="final-text">Scan the QR below to hear our wedding song 💖</p>
+      <img src="assets/qrcodes/song1.png" class="qr-img" alt="Wedding Song QR">
+    </div>
+  </div>
+
+  <!-- Slide 6b - Card -->
+  <div id="slide6b" class="slide hidden-slide">
+    <div class="slide-content">
+      <h2 class="final-title">A Letter Just for You 💌</h2>
+      <p class="final-text">Scan the QR below to open your personal message card 😊</p>
+      <img src="assets/qrcodes/cardQR.png" class="qr-img" alt="Card QR">
+    </div>
+  </div>
+
+  <!-- Slide 6c - Video -->
+  <div id="slide6c" class="slide hidden-slide">
+    <div class="slide-content">
+      <h2 class="final-title">A Special Video for You 🎥</h2>
+      <p class="final-text">Scan the QR below to watch the video ❤️</p>
+      <img src="assets/qrcodes/videoQR.png" class="qr-img" alt="Video QR">
+    </div>
+  </div>
+
+  <script src="script-valentine.js"></script>
+</body>
+</html>
