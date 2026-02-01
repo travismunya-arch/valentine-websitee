@@ -3,27 +3,118 @@
 <head>
   <meta charset="UTF-8">
   <title>Create Valentine 💖</title>
-  <!-- Google Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="style.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="generator">
-    <h1>Create Your Valentine 💖</h1>
+  <!-- ===== SLIDE 1: Envelope Greeting ===== -->
+  <div id="slide1" class="slide valentine-slide">
+    <div class="envelope-container">
+      <div class="envelope">
+        <div class="envelope-top"></div>
+        <div class="envelope-body">
+          <p id="valentine-text">Will you be my Valentine?</p>
+          <p id="valentine-msg">Click the seal to open your love letter 💌</p>
+        </div>
+        <button class="envelope-seal" id="openEnvelope">💖</button>
+      </div>
+    </div>
 
-    <input type="text" id="toName" placeholder="Her name">
-    <input type="text" id="fromName" placeholder="Your name">
+    <div class="love-card">
+      <h3>Love Level: <span id="love-level-text">Glowing</span></h3>
+      <div class="love-bar">
+        <div class="love-progress" id="love-progress"></div>
+      </div>
+      <p class="love-subtext">Side effects include spontaneous smiling & extra cuddles 💕</p>
+    </div>
 
-    <button id="generateBtn">Generate Link</button>
+    <div class="coupon-cards">
+      <div class="coupon">
+        <h4>Snack Mission</h4>
+        <p>Crunchy, sweet, and extra napkins. We are prepared.</p>
+      </div>
+      <div class="coupon">
+        <h4>Playlist Swap</h4>
+        <p>You pick the mood. I queue the heart songs.</p>
+      </div>
+      <div class="coupon">
+        <h4>Hug Voucher</h4>
+        <p>Unlimited squeezes. Redeem any time you want.</p>
+      </div>
+      <div class="coupon">
+        <h4>Meme Reserve</h4>
+        <p>Curated chaos, saved just for us.</p>
+      </div>
+    </div>
 
-    <p id="result"></p>
+    <button class="next-btn" id="toSlide2">Next →</button>
   </div>
 
-  <!-- JS MUST BE AT THE BOTTOM -->
+  <!-- ===== SLIDE 2: You + Me ===== -->
+  <div id="slide2" class="slide hidden-slide">
+    <h2 id="you-me-heading">Us Together 💞</h2>
+    <p id="you-me-text">Every moment with you feels like a little adventure. Here's a peek into our memories together.</p>
+
+    <div class="image-frame">
+      <img src="assets/couple.jpg" alt="Couple Photo" class="couple-photo">
+    </div>
+
+    <div class="love-list-box">
+      <ul class="love-list">
+        <li>Laughs that never end</li>
+        <li>Spontaneous adventures</li>
+        <li>Quiet nights together</li>
+        <li>Shared dreams</li>
+      </ul>
+    </div>
+
+    <button class="next-btn" id="toSlide3">Next →</button>
+  </div>
+
+  <!-- ===== SLIDE 3: Love Letter ===== -->
+  <div id="slide3" class="slide hidden-slide">
+    <div class="love-letter-container">
+      <p id="love-letter-text">
+        Dear <span id="letter-to">[Name]</span>,<br>
+        I just wanted to say how amazing you are. Every day I am grateful for you and all the little things that make us… us. 💌
+      </p>
+    </div>
+    <button class="next-btn" id="toSlide4">Next →</button>
+  </div>
+
+  <!-- ===== SLIDE 4: Flowers & Messages ===== -->
+  <div id="slide4" class="slide hidden-slide">
+    <h2>Just for You 🌸</h2>
+
+    <div class="flower-frame">
+      <img src="assets/flower1.png" class="flower-img" alt="Flower">
+      <p class="message-float left-msg">Blooming happiness for you!</p>
+      <p class="message-float right-msg">Smiles wherever you go!</p>
+      <p class="message-float left-msg2">Sending love & warmth 💖</p>
+    </div>
+
+    <button class="next-btn" id="toSlide5">Next →</button>
+  </div>
+
+  <!-- ===== SLIDE 5: Gifts ===== -->
+  <div id="slide5" class="slide hidden-slide">
+    <h2>Pick a Gift 🎁</h2>
+
+    <div class="gifts-container">
+      <div id="gift1" class="gift"></div>
+      <div id="gift2" class="gift"></div>
+      <div id="gift3" class="gift"></div>
+    </div>
+  </div>
+
+  <!-- JS -->
   <script src="script.js"></script>
 </body>
 </html>
